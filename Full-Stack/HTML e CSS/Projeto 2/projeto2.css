@@ -21,7 +21,7 @@ main {
     padding: 0  24px 24px 24px;
 }
 
-h1, h2, p {
+h1, h2, p, li {
         font-family: "Alice", serif;
         font-weight: 400;
         font-style: normal;
@@ -38,7 +38,8 @@ h2 {
     line-height: 150%;
 }
 
-p {
+p, li {
     font-size: 16px;
     line-height: 150%;
+    color: #573A37;
 }
