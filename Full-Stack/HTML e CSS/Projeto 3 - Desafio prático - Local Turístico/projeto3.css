@@ -1,0 +1,68 @@
+.subtitulo {
+    color: #E1624F;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+    color: #1B1B1B;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+}
+
+span {
+    color: #1B1B1B;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+}
+
+.indicacoes {
+    color: #333333;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+}
+
+.italico {
+    font-style: italic;
+    font-family: "Open Sans", sans-serif;
+}
+
+p {
+    font-size: 16px;
+    color: #333333;
+    font-family: "Open Sans", sans-serif;
+}
+
+.azul {
+    font-size: 16px;
+    color: #0C51A7;
+    font-family: "Open Sans", sans-serif;
+}
+
+.roxo{
+    color: #591B98;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.rosa {
+    color: #E5245E;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.laranja {
+    color: #E95E10;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
+
+footer {
+    font-family: "Alice", serif;
+    font-size: 14px;
+    text-align: center;
+}
