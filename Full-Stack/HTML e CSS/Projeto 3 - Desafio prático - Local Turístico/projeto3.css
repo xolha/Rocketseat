@@ -61,8 +61,10 @@ p {
     font-family: "Open Sans", sans-serif;
 }
 
-footer {
+footer span {
     font-family: "Alice", serif;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
+    font-style: normal;
 }
+
