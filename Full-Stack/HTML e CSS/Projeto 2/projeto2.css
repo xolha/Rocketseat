@@ -16,10 +16,16 @@ img {
     margin: 48px auto;
     box-sizing: border-box;
 }
+
+main {
+    padding: 0  24px 24px 24px;
+}
+
 h1, h2, p {
         font-family: "Alice", serif;
         font-weight: 400;
         font-style: normal;
+        color: #291B1A;
 }
 
 h1 {
