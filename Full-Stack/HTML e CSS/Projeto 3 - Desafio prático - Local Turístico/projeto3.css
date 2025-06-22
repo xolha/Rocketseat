@@ -11,9 +11,10 @@ h2 {
     font-size: 32px;
     font-weight: bold;
     font-family: "Open Sans", sans-serif;
+    margin-top: -10px;
 }
 
-span {
+.lista {
     color: #1B1B1B;
     font-size: 28px;
     font-weight: bold;
@@ -30,6 +31,7 @@ span {
 .italico {
     font-style: italic;
     font-family: "Open Sans", sans-serif;
+    text-align: center;
 }
 
 p {
@@ -42,12 +44,15 @@ p {
     font-size: 16px;
     color: #0C51A7;
     font-family: "Open Sans", sans-serif;
+    margin-top: -20px;
+    margin-bottom: 48px;
 }
 
 .roxo{
     color: #591B98;
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
+    margin-top: -20px;
 }
 
 .rosa {
@@ -65,8 +70,14 @@ p {
 footer span {
     font-family: "Alice", serif;
     font-size: 16px;
-    text-align: center;
     font-style: normal;
+    padding-bottom: 68px;
+}
+
+footer {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .divider {
@@ -79,3 +90,27 @@ footer span {
 body {
     background-color: #F5F4F0;
 }
+
+/* PADDING E MARGIN */
+.container {
+    box-sizing: border-box;
+    padding: 80px;
+    margin: 8px auto;
+}
+
+.container img {
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.secao1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.secao2 {
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+
