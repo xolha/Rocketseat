@@ -6,6 +6,14 @@
     font-family: "Open Sans", sans-serif;
 }
 
+h1 {
+    color: #1B1B1B;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+    margin-top: -10px;
+}
+
 h2 {
     color: #1B1B1B;
     font-size: 32px;
