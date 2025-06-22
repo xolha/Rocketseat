@@ -42,9 +42,8 @@ p {
 
 .azul {
     font-size: 16px;
-    color: #0C51A7;
     font-family: "Open Sans", sans-serif;
-    margin-top: -10px;
+    color: #0C51A7;
     margin-bottom: 48px;
     font-weight: bold;
 }
@@ -53,7 +52,6 @@ p {
     color: #591B98;
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
-    margin-top: -10px;
     font-weight: bold;
 }
 
@@ -117,5 +115,7 @@ body {
     margin-bottom: 64px;
 }
 
-
+.lista2 {
+    margin-top: -20px;
+}
 
