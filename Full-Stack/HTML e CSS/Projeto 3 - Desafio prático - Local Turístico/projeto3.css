@@ -23,7 +23,7 @@ h2 {
 
 .indicacoes {
     color: #333333;
-    font-size: 28px;
+    font-size: 16px;
     font-weight: bold;
     font-family: "Open Sans", sans-serif;
 }
@@ -46,6 +46,7 @@ p {
     font-family: "Open Sans", sans-serif;
     margin-top: -20px;
     margin-bottom: 48px;
+    font-weight: bold;
 }
 
 .roxo{
@@ -53,18 +54,21 @@ p {
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
     margin-top: -20px;
+    font-weight: bold;
 }
 
 .rosa {
     color: #E5245E;
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
+    font-weight: bold;
 }
 
 .laranja {
     color: #E95E10;
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
+    font-weight: bold;
 }
 
 footer span {
