@@ -29,3 +29,30 @@ nav ul {
 #profile > div {
     max-width: 384px;
 }
+
+#profile h1 {
+    font: var(--text-large-lg);
+    color: var(--text-color-primary);
+    margin-bottom: 8px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: var(--text-medium-md);
+}
+
+#info {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 280px;
+}
+
+#info li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
