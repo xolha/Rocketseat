@@ -17,9 +17,17 @@
     --text-color-secondary: #6C6C6C;
     --font-family: "Poppins", sans-serif;
     --text-large-lg: bold 32px/125% var(--font-family);
-    --text: regular 16px/150% var(--font-family);
     --text-medium-md: regular 14px/170% var(--font-family);
     --text-small-sm: regular 12px/170% var(--font-family);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--text-color-secondary);
+    background-color: var(--background-color);
 }
 
 a {
@@ -41,3 +49,4 @@ a:hover {
 .bg-surface-color {
     background-color: var(--surface0color);
 }
+
