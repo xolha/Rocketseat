@@ -21,3 +21,23 @@
     --text-medium-md: regular 14px/170% var(--font-family);
     --text-small-sm: regular 12px/170% var(--font-family);
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: var(--brand-color);
+    text-decoration: underline;
+}
+
+.container {
+    padding-inline: 32px;
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+.bg-surface-color {
+    background-color: var(--surface0color);
+}
