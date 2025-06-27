@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.root {
+    /*CORES*/
+    /*produto*/
+    --brand-color-ligh: #60A5FA;
+    --brand-color-dark: #1D4ED8 ;
+
+    /*base*/
+    --bg-color: #0F172A;
+    --stroke-color: #1E293B;
+
+    /*textos*/
+    --text-color-primary: #F1F5F;
+    --text-color-secondary: #CBD5E1;
+
+
+    /*TIPOGRAFIA*/
+    --font-family: "Archivo", sans-serif;
+    --heading1: extrabold 24px/135% var(--font-family);
+    --heading2: extrabold 16px/140% var(--font-family);
+    --heading3: extrabold 14px/140% var(--font-family);
+    --span: semibold 14px/145% var(--font-family);
+    --paragraph: regular 14px/160% var(--font-family);
+}
