@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 
-.root {
+:root {
     /*CORES*/
     /*produto*/
     --brand-color-ligh: #60A5FA;
-    --brand-color-dark: #1D4ED8 ;
+    --brand-color-dark: #1D4ED8;
 
     /*base*/
     --bg-color: #0F172A;
