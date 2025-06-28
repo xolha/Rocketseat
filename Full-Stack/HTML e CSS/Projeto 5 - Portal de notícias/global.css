@@ -2,28 +2,54 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 :root {
     /*CORES*/
     /*produto*/
-    --brand-color-ligh: #60A5FA;
-    --brand-color-dark: #1D4ED8;
+    --brand-color-light: #60A5FA;
+    --brand-color-dark: #1D4ED8 ;
 
     /*base*/
     --bg-color: #0F172A;
     --stroke-color: #1E293B;
 
     /*textos*/
-    --text-color-primary: #F1F5F;
+    --text-color-primary: #F1F5F9;
     --text-color-secondary: #CBD5E1;
 
 
     /*TIPOGRAFIA*/
     --font-family: "Archivo", sans-serif;
-    --heading1: extrabold 24px/135% var(--font-family);
-    --heading2: extrabold 16px/140% var(--font-family);
-    --heading3: extrabold 14px/140% var(--font-family);
-    --span: semibold 14px/145% var(--font-family);
-    --paragraph: regular 14px/160% var(--font-family);
+    --heading1: 800 24px/135% "Archivo", sans-serif;
+    --nav-title: 400 24px/135% "Archivo Black", sans-serif;
+    --nav-menu: 400 16px/135% "Archivo", sans-serif;
+    --heading2: 800 16px/140% var(--font-family);
+    --heading3: 800 14px/140% var(--font-family);
+    --span: 600 14px/145% var(--font-family);
+    --paragraph: 400 14px/160% var(--font-family);
 }
+
+body {
+    background-color: var(--bg-color);
+    font: var(--font-family);
+    color: var(--text-color-primary);
+}
+
+header {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1280px;
+    padding-block: 32px;
+    padding-inline: 20px;
+}
+
+
+

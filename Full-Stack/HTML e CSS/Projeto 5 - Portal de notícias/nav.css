@@ -1,4 +1,42 @@
-nav {
+#nav1 {
     display: flex;
-    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    font: var(--nav-menu);
+    height: 64px;
+
+    padding-block: 20px;
 }
+
+#nav1 h1 {
+    font: var(--nav-title);
+    color: var(--brand-color-light);
+}
+
+.menu1 {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.menu1 a {
+    width: 20px;
+    height: 20px;
+}
+
+.menu1 img {
+    object-fit: contain;
+    align-items: center;
+}
+
+
+#nav2 {
+    display: flex;
+    justify-content: space-between;
+    font: var(--heading3);
+    color: var(--text-color-secondary);
+    border: solid 1px var(--stroke-color);
+    border-inline: none;
+    padding: 14px;
+}
+
