@@ -40,3 +40,6 @@
     padding: 14px;
 }
 
+a:hover {
+    color: var(--brand-color-light);
+}
