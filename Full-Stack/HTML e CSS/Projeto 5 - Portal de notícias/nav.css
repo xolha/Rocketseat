@@ -33,7 +33,7 @@
 #nav2 {
     display: flex;
     justify-content: space-between;
-    font: var(--heading3);
+    font: var(--nav-page);
     color: var(--text-color-secondary);
     border: solid 1px var(--stroke-color);
     border-inline: none;

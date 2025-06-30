@@ -25,6 +25,7 @@
     --heading1: 800 24px/135% "Archivo", sans-serif;
     --nav-title: 400 24px/135% "Archivo Black", sans-serif;
     --nav-menu: 400 16px/135% "Archivo", sans-serif;
+    --nav-page: 400 14px/135% "Archivo", sans-serif;
     --heading2: 800 16px/140% var(--font-family);
     --heading3: 800 14px/140% var(--font-family);
     --heading6: 400 10px/140% var(--font-family);
