@@ -1,0 +1,45 @@
+.post {
+    display: flex;
+}
+
+.post1 img {
+    height: 416px;
+    width: 608px;
+}
+
+.info-post {
+    width: 608px;
+    position: relative;
+}
+
+.card {
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        padding: 24px;
+        font-family: "Archivo", sans-serif;
+        font-size: 17px;
+    }
+
+    figcaption div {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 4px;
+        background-color:var(--brand-color-dark);
+        margin-bottom: 8px;
+        font-family: "Archivo", sans-serif;
+        font-size: medium;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        top: 50%;
+        background-image: linear-gradient(180deg, transparent 0%, #020617);
+    }
+}

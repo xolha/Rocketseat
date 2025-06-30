@@ -27,6 +27,7 @@
     --nav-menu: 400 16px/135% "Archivo", sans-serif;
     --heading2: 800 16px/140% var(--font-family);
     --heading3: 800 14px/140% var(--font-family);
+    --heading6: 400 10px/140% var(--font-family);
     --span: 600 14px/145% var(--font-family);
     --paragraph: 400 14px/160% var(--font-family);
 }
