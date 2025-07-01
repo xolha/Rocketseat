@@ -48,10 +48,11 @@ a {
 }
 
 .container {
-    max-width: 1280px;
     padding-block: 32px;
     padding-inline: 20px;
 }
+
+
 
 
 

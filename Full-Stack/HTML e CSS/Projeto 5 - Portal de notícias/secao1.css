@@ -1,15 +1,29 @@
 .post {
     display: flex;
+    gap: 16px;
+    justify-content: space-between;
 }
 
 .post1 img {
-    height: 416px;
-    width: 608px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .info-post {
-    width: 608px;
+    width: 100%;
+    max-width: 608px;
     position: relative;
+}
+
+.post1 {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    min-width: 300px;
+    max-width: 750px;
+    width: 100%;
+    flex: 1;
 }
 
 .card {
@@ -17,7 +31,7 @@
     overflow: hidden;
     position: relative;
 
-    figcaption {
+    figcaption { /* titulo do post */
         position: absolute;
         bottom: 0;
         padding: 24px;
@@ -25,7 +39,7 @@
         font-size: 17px;
     }
 
-    figcaption div {
+    figcaption div { /* tag da postagem */
         display: inline-block;
         padding: 4px 8px;
         border-radius: 4px;
@@ -35,7 +49,7 @@
         font-size: medium;
     }
 
-    &::before {
+    &::before { /*colocar gradiente */
         content: "";
         position: absolute;
         inset: 0;
@@ -43,3 +57,81 @@
         background-image: linear-gradient(180deg, transparent 0%, #020617);
     }
 }
+
+.post2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post2, card {
+    position: relative;
+    width: 288px;
+    height: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 16px;
+        color: white;
+        font-family: "Archivo", sans-serif;
+        font-size: 14px;
+        z-index: 1;
+    }
+
+    figcaption div {
+        font-size: 10px;
+    }
+
+    .post2.card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        top: 40%;
+        background: linear-gradient(to bottom, transparent, #020617);
+        z-index: 0;
+    }
+}
+
+.post2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    flex: 1; /* ocupar o lado esquerdo */
+    height: 100%; /* fica com o mesmo tamanho do container pai */
+}
+
+.card-2 {
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+
+    figcaption { /* titulo do post */
+        position: absolute;
+        bottom: 0;
+        font-family: "Archivo", sans-serif;
+        font-size: 10px;
+    }
+
+    figcaption div { /* tag da postagem */
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 4px;
+        background-color:var(--brand-color-dark);
+        margin-bottom: 8px;
+        font-family: "Archivo", sans-serif;
+        font-size: 10px;
+    }
+
+    &::before { /*colocar gradiente */
+        content: "";
+        position: absolute;
+        inset: 0;
+        top: 50%;
+        background-image: linear-gradient(180deg, transparent 0%, #020617);
+    }
+}
+
