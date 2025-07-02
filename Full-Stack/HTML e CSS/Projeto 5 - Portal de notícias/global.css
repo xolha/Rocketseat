@@ -46,10 +46,18 @@ a {
     text-decoration: none;
     color: inherit;
 }
+main {
+    margin-bottom: 80px
+}
 
 .container {
     padding-block: 32px;
     padding-inline: 20px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 

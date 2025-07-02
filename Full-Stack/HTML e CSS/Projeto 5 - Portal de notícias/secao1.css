@@ -134,3 +134,19 @@
     font-family: "Archivo", sans-serif;
     font-size: 10px;
 }
+
+.grid {
+    display: grid;
+}
+
+.grid-flow-col {
+    grid-auto-flow: column;
+}
+
+.grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.gap-16px {
+    gap: 16px;
+}
