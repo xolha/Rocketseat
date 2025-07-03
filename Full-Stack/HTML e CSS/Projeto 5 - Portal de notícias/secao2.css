@@ -9,6 +9,7 @@ section {
 }
 
 #mais-lida {
+    grid-area: mais-lida;
 
     header a {
         justify-self: end;

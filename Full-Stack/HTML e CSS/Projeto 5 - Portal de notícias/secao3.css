@@ -1,3 +1,74 @@
 .gap-32px {
     gap: 32px;
 }
+
+#destaques {
+    grid-area: destaques;
+
+    header a {
+        justify-self: end;
+        align-items: center;
+        gap: 8px;
+
+        span {
+            width: 16px;
+            height: 16px;
+        }
+    }
+    img {
+        width: 176px;
+        height: auto;
+    }
+}
+
+article {
+    h3 {
+        font: var(--heading2);
+        margin-block: 8px 4px;
+    }
+
+    p {
+        font: var(--paragraph);
+    }
+}
+
+#saiba-mais {
+    margin-bottom: 0;
+
+    header a {
+        justify-self: end;
+        align-items: center;
+        gap: 8px;
+
+        span {
+            width: 16px;
+            height: 16px;
+
+        }
+    }
+}
+
+
+#ultimo {
+    display: flex;
+    gap: 16px;
+}
+
+#aside {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 300px;
+}
+
+#ad-saiba-mais {
+    gap: 16px;
+    h3 {
+        align-items: center;
+        font-size: 12px;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}

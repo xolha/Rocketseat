@@ -2,6 +2,8 @@
     display: flex;
     gap: 16px;
     justify-content: space-between;
+
+    grid-area: post;
 }
 
 .post1 img {
