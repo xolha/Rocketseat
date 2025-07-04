@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /* principal */
+    --red: #E3646E;
+    --purple: #BB72E9;
+    --blue: #3996DB;
+    --green: #82BC4F;
+    --yellow: #EABD5F;
+
+    /* base */
+    --gray-100: #E2E4E9;
+    --gray-200: #C0C4CE;
+    --gray-300: #878EA1;
+    --gray-400: #292C34;
+    --gray-500: #16181D;
+    --gray-600: #0D0E11;
+}
