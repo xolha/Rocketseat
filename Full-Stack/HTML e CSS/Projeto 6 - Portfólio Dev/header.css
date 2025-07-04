@@ -1,0 +1,24 @@
+#inicio {
+    background-image: url("./assets/Background_Intro.png");
+    background-size: cover;
+}
+
+.secao1 {
+    padding-block:  120px 183px;
+    margin: auto 163px;
+    text-align: center;
+
+    h3 {
+        font: var(--subtitle);
+        color: var(--gray-200);
+    }
+
+    h1 {
+        font: var(--title-lg);
+        color: var(--gray-100);
+    }
+    p {
+        font: var(--text-sm-maven);
+        color: var(--gray-300);
+    }
+}
