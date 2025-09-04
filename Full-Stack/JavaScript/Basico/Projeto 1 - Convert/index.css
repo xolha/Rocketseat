@@ -128,9 +128,6 @@ button {
 button:hover {
     background-color: var(--blue-700);
 }
-button:focus {
-    outline: 8px solid var(--blue-700);
-}
 
 footer {
     background-color: var(--blue-400);
