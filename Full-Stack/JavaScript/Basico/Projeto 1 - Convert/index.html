@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Convert</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
@@ -17,27 +18,26 @@
 
 <main> <!-- container principal -->
     <form>
-        <label for="valor"> Valor </label>
-        <input type="text" name="valor" id="valor" placeholder="0" required>
+        <label for="amount"> Valor </label>
+        <input type="text" name="amount" id="amount" placeholder="0" required>
 
-        <label for="moeda"> Moeda </label>
-        <select name="moeda" id="moeda" required>
-            <option value="" disabled selected> Selecione a moeda</option>
+        <label for="currency"> Moeda </label>
+        <select name="currency" id="currency" required>
+            <option value="" disabled selected hidden> Selecione a moeda</option>
             <option value="USD">Dólar Americano</option>
             <option value="EUR">Euro</option>
             <option value="GBP">Libra Esterlina</option>
         </select>
 
-        <button type="submit">
-            Converter em reais
-        </button>
+        <button type="submit">Converter em reais</button>
     </form>
-</main>
 
-<footer>
-    <span id="descricao"></span>
-    <h1 id="resultado"></h1>
-</footer>
+    <!-- isso aqui é só temporário, é só pra eu testar :) -->
+    <footer class="show-result">
+        <span id="descricao">US$ 1 = R$ 4,86</span>
+        <h1 id="resultado">48,60 Reais</h1>
+    </footer>
+</main>
 
 <script src="script.js"></script>
 
