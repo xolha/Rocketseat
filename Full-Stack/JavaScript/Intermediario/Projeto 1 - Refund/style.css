@@ -26,9 +26,314 @@
     --heading-lg: bold 20px/24px var(--font-family);
     --heading-md: bold 16px/20px var(--font-family);
     --heading-sm: bold 14px/18px var(--font-family);
-    --subheading: semibold 14px/18px var(--font-family);
-    --body-lg: regular 16px/20px var(--font-family);
-    --body-md: regular 14px/18px var(--font-family);
-    --body-sm: regular 12px/16px var(--font-family);
-    --label: regular 10px/14px var(--font-family);
+    --subheading: 600 14px/18px var(--font-family);
+    --body-lg: 400 16px/20px var(--font-family);
+    --body-md: 400 14px/18px var(--font-family);
+    --body-sm: 400 12px/16px var(--font-family);
+    --label: 400 10px/14px var(--font-family);
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-400);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--gray-400);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--gray-100);
+}
+
+.logo {
+    margin: 3rem 0 2rem;
+}
+
+main section {
+    display: flex;
+    flex: 1;
+    gap: 1.25rem;
+    padding-bottom: 2rem;
+}
+
+form {
+    background-color: var(--gray-500);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    max-width: 462px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+form h1 {
+    font: var(--heading-lg);
+}
+
+form p {
+    font: var(--subheading);
+    color: var(--gray-200);
+    margin: 0.75rem 0 2.5rem;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+}
+
+fieldset legend {
+    text-transform: uppercase;
+    font: var(--body-md);
+    color: var(--gray-200);
+    margin-bottom: 0.5rem;
+}
+
+fieldset:focus-within legend {
+    color: var(--green-100);
+    font-weight: 700;
+}
+
+input, select {
+    flex: 1;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--gray-300);
+    padding: 0 1rem;
+    font-size: 0.87rem;
+    color: var(--gray-100);
+    background-color: transparent;
+    outline: none;
+}
+
+select {
+    appearance: none;
+    background-image: url(img/chevron-down.svg);
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 1.25rem auto;
+}
+
+input::placeholder, select:invalid {
+    color: var(--gray-200);
+}
+
+input:focus, select:focus {
+    border: 3px solid var(--green-100);
+}
+
+.inputs-row {
+    display: flex;
+    flex: 1;
+
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.inputs-row fieldset:first-child {
+    flex: 1;
+}
+
+.inputs-row fieldset:last-child input {
+    max-width: 154px;
+}
+
+form button {
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: none;
+    font: var(--subheading);
+    color: var(--white);
+    background-color: var(--green-100);
+    font-weight: 700;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--green-200);
+}
+
+form button:last-child {
+    margin-top: 2rem;
+}
+
+aside {
+    background-color: var(--gray-500);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    max-width: 462px;
+
+    min-width: 600px;
+}
+
+aside header {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--gray-400);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+aside header p {
+    color: var(--gray-200);
+    font-weight: 400;
+    font-size: 1rem;
+    font: var(--body-sm);
+}
+
+aside header p span {
+    color: var(--gray-200);
+    font: var(--body-md);
+    font-size: 0.87rem;
+}
+
+aside header p i {
+    color: var(--gray-300);
+    margin: 0 0.5rem;
+    font-style: normal;
+}
+
+aside header h2 {
+    font: var(--body-sm);
+    font-size: 1rem;
+    color: var(--gray-100);
+}
+
+aside header small {
+    color: var(--gray-200);
+    font-weight: 400;
+    font: var(--body-md);
+    margin-right: 0.25rem;
+}
+
+aside ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    max-height: 310px;
+    min-height: 310px;
+
+    overflow-y: scroll;
+}
+
+.expense {
+    display: flex;
+    align-items: center;
+    height: 38px;
+}
+
+.expense img:first-child {
+    width: 2rem;
+    height: 2rem;
+
+    margin-right: 0.75rem;
+}
+
+.expense > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.expense-info strong {
+    font: var(--heading-md);
+    color: var(--gray-100);
+}
+
+.expense-info span {
+    font: var(--body-sm);
+    color: var(--gray-200);
+}
+
+.expense-amount {
+    font: var(--body-sm);
+    color: var(--gray-100);
+    font-weight: 600;
+}
+
+.expense-amount small {
+    font: var(--body-sm);
+    color: var(--gray-200);
+    font-weight: 400;
+    margin-right: 0.25rem;
+}
+
+.remove-icon {
+    height: 1rem;
+    margin-left: 0.5rem;
+
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.remove-icon:hover {
+    opacity: 0.7;
+}
+
+@media (min-width: 1100px) {
+    form {
+        max-height: 428px;
+    }
+}
+
+@media (max-width: 1100px) {
+    :root {
+        font-size: 14px;
+    }
+
+    main, aside {
+        min-width: 100%;
+    }
+
+    main section {
+        flex-direction: column;
+        width: 100%;
+
+        padding: 1.5rem;
+    }
+
+    main section form {
+        min-width: 100%;
+    }
+
+    main section aside ul {
+        width: 100%;
+        height: auto;
+        overflow: auto;
+    }
+}
+
+@media (max-width: 620px) {
+    .inputs-row {
+        flex-direction: column;
+    }
+
+    .inputs-row fieldset:last-child input {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    aside header {
+        flex-direction: column;
+        align-items: center;
+    }
 }
