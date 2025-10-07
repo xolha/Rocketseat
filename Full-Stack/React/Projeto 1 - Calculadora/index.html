@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Calculadora</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap" rel="stylesheet">
+
     <style type="text/tailwindcss">
         @theme {
             --text: #EBEBEB;
@@ -32,11 +36,9 @@
     </style>
 
 </head>
-<body>
+<body className="text-(--text) font-(--font-sans)">
 
-<div id="root">
-
-</div>
+<div id="root"></div>
 
 <!-- tags para rodas o React de forma dinâmica e numa página única -->
 <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -44,8 +46,39 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 <script type="text/babel">
+    /* global React, ReactDOM */
 
+    //mapeamento das variáveis
+    textVariants = {
+        default: 'text-xl',
+        muted: 'text-xl text-(--text-secondary)',
+        heading: 'text-2xl',
+        blast: 'text-3xl'
+    }
 
+    //componente de texto
+    //o texto por padrão será um span, caso ele tenha um "as", ele passa a ter a propriedade inserida nesse as.
+    function Text(as = 'span', variant = 'default', children, ...props) {
+        return React.createElement(
+            as,
+            {
+                className: `${textVariants[variant]} ${className}`, //template string que contém o texto e as variações de texto junto com o className desestruturado do objeto
+                ...props,
+            },
+            children, //esse children significa quais elementos virão aqui
+
+        )
+    }
+
+    function App() {
+        return (
+            <main className="py-28 px-4">
+
+            </main>
+        )
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />)
 </script>
 
 </body>
