@@ -37,7 +37,7 @@
 
 </head>
 <!-- o "className" só começa a partir da div abaixo, já que o React só começa ali -->
-<body class="text-(--text) font-(--font-sans) min-h-screen">
+<body class="min-h-screen bg-linear-[180deg,_#807ECE_0%,_#8E7ECE_100%] text-(--text) font-(--font-sans) min-h-screen">
 
 <div id="root"></div>
 
@@ -205,10 +205,33 @@
         )
     }
 
+    function OperationHistory() {
+        return (
+            <Card className="py-10 px-8 w-full">
+                <Text as="h1" variant="heading" className="mb-4">
+                    Histórico de Operações
+                </Text>
+
+                <ul className="flex flex-col gap-3">
+                    <Text as="li">
+                        1 + 1 = 2
+                    </Text>
+                    <Text as="li">
+                        2 + 3 = 5
+                    </Text>
+                    <Text as="li">
+                        3 + 3 = 6
+                    </Text>
+                </ul>
+            </Card>
+        )
+    }
+
     function App() {
         return (
-            <main className="py-28 px-4">
-                <Calculator/>
+            <main className="py-28 px-4 flex flex-col sm:flex-row items-center sm:items-stretch gap-2 sm:px-10">
+                <Calculator />
+                <OperationHistory />
             </main>
         )
     }
