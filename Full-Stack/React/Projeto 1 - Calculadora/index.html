@@ -41,6 +41,7 @@
 <div id="root"></div>
 
 <!-- tags para rodas o React de forma dinâmica e numa página única -->
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -49,11 +50,16 @@
     /* global React, ReactDOM */
 
     //mapeamento das variáveis
-    textVariants = {
+    const textVariants = {
         default: 'text-xl',
         muted: 'text-xl text-(--text-secondary)',
         heading: 'text-2xl',
         blast: 'text-3xl'
+    }
+
+    const buttonVariants = {
+        default: 'bg-(--background)',
+        primary: 'bg-(--primary)',
     }
 
     //componente de texto
@@ -62,7 +68,7 @@
         return React.createElement(
             as,
             {
-                className: `${textVariants[variant]} ${className}`, //template string que contém o texto e as variações de texto junto com o className desestruturado do objeto
+                className: `${textVariants[variant]} ${className ? className : ''}`, //template string que contém o texto e as variações de texto junto com o className desestruturado do objeto
                 ...props,
             },
             children, //esse children significa quais elementos virão aqui
@@ -70,10 +76,39 @@
         )
     }
 
+    //componente de botão
+    function Button({variant='default', className, children, ...props}) {
+        return <Text as"button"
+                     variant="heading"
+                     className= {
+                        `flex justify-center items-center rounded p-3 cursor-pointer text-(--text)
+                        bg-linear-(--gradient) hover:bg-linear-(--gradient-hover) shadow-(--shadow)
+
+                        ${buttonVariants[variant]}
+                        ${className ? className : ''}`
+                     }
+                     {...props}
+        >
+            {children}
+        </Text>
+    }
+
+    function Card({children, className, ...props}) {
+        return (
+            <div className={`
+                bg-(--background) shadow-(--shadow)
+                rounded-2xl
+                ${className ? className : ''}
+            `}>
+                {children}
+            </div>
+        )
+    }
+
     function App() {
         return (
             <main className="py-28 px-4">
-
+                <Button>CE</Button>
             </main>
         )
     }
