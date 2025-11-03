@@ -7,6 +7,8 @@ import SpinnerIcon from "./assets/icons/spinner.svg?react"
 import PencilIcon from "./assets/icons/PencilSimple-Regular.svg?react"
 import XIcon from "./assets/icons/X-Regular.svg?react"
 import Badge from "./component/badge.tsx";
+import Button from "./component/button.tsx";
+import ButtonIcon from "./component/button-icon.tsx";
 
 function App() {
 
@@ -31,6 +33,16 @@ function App() {
                     <Badge variant="secondary">
                         5
                     </Badge>
+                </div>
+
+                <div>
+                    <Button icon={PlusIcon}> Nova Tarefa </Button>
+                </div>
+
+                <div className="flex gap-1">
+                    <ButtonIcon icon={TrashIcon} variant="secondary"/>
+                    <ButtonIcon icon={TrashIcon} variant="secondary"/>
+                    <ButtonIcon icon={TrashIcon} variant="tertiary"/>
                 </div>
             </div>
         </div>
