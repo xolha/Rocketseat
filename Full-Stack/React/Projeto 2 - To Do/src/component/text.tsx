@@ -4,6 +4,7 @@ interface TextProps {
     as?: keyof React.JSX.IntrinsicElements; //mapeia cada tag HTML para o seu tipo React
     className?: string;
     children?: React.ReactNode; //a tipagem assim é basicamente que pode ser qualquer coisa no parâmetro do React
+    variant?: string;
 }
 
 export default function Text({

@@ -6,6 +6,7 @@ import PlusIcon from "./assets/icons/Plus-Regular.svg?react"
 import SpinnerIcon from "./assets/icons/spinner.svg?react"
 import PencilIcon from "./assets/icons/PencilSimple-Regular.svg?react"
 import XIcon from "./assets/icons/X-Regular.svg?react"
+import Badge from "./component/badge.tsx";
 
 function App() {
 
@@ -22,6 +23,15 @@ function App() {
                 <Icon svg={SpinnerIcon} animate className="fill-pink-base"/>
                 <Icon svg={PencilIcon} className="fill-pink-base"/>
                 <Icon svg={XIcon} className="fill-pink-base"/>
+
+                <div>
+                    <Badge variant="primary">
+                                2 de 5
+                    </Badge>
+                    <Badge variant="secondary">
+                        5
+                    </Badge>
+                </div>
             </div>
         </div>
 
