@@ -1,6 +1,6 @@
 import Text from "./component/text.tsx"
 import TrashIcon from "./assets/icons/Trash-Regular.svg?react"
-import Icon from "./component/icon.tsx";
+import Icon from "./component/icon.tsx"; //
 import CheckIcon from "./assets/icons/Check-Regular.svg?react"
 import PlusIcon from "./assets/icons/Plus-Regular.svg?react"
 import SpinnerIcon from "./assets/icons/spinner.svg?react"
@@ -10,6 +10,7 @@ import Badge from "./component/badge.tsx";
 import Button from "./component/button.tsx";
 import ButtonIcon from "./component/button-icon.tsx";
 import InputText from "./component/input-text.tsx";
+import InputCheckbox from "./component/input-checkbox.tsx";
 
 function App() {
 
@@ -48,6 +49,10 @@ function App() {
 
                 <div>
                     <InputText />
+                </div>
+
+                <div>
+                    <InputCheckbox />
                 </div>
             </div>
         </div>
