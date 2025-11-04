@@ -25,13 +25,15 @@ export default function TaskItem() {
 
     return (
         <Container>
-            <Card size="md" className="flex items-center gap-4">
+            <Card size="md" className="flex items-center justify-between gap-4">
                 {!isEditing ? /*"não está a editar então mostra o padrão*/
                     <>
-                        <InputCheckbox/>
-                        <Text variant="flex-1">
-                            🛒 Fazer compras da semana
-                        </Text>
+                        <div className="flex items-center gap-3">
+                            <InputCheckbox />
+                            <Text variant="flex-1">
+                                🛒 Fazer compras da semana
+                            </Text>
+                        </div>
                         <div className="flex gap-1">
                             <ButtonIcon icon={TrashIcon} variant="tertiary"/>
                             <ButtonIcon icon={PencilIcon} variant="tertiary" onClick={handleEditTask}/>
