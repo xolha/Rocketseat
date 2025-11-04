@@ -19,6 +19,8 @@ interface TaskItemProps {
 export default function TaskItem({task}: TaskItemProps) {
     const [isEditing, setEditing] = React.useState(task?.state === TASK_STATE.Creating);
 
+    const [taskTitle, setTaskTitle] = React.useState(task?.title ?? "")
+
     function handleEditTask() {
         // @ts-ignore
         setEditing(true);
@@ -29,11 +31,22 @@ export default function TaskItem({task}: TaskItemProps) {
         setEditing(false);
     }
 
+    function handleChangeTaskTitle(e: React.ChangeEvent<HTMLInputElement>) {
+        setTaskTitle(e.target.value || "");
+    }
+
+    function handleSaveTask(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+         console.log({id: task.id, title: taskTitle});
+
+         setEditing(false);
+    }
+
     return (
         <Container>
-            <Card size="md" className="flex items-center justify-between gap-4">
+            <Card size="md" >
                 {!isEditing ? /*"não está a editar então mostra o padrão*/
-                    <>
+                    <div className="flex items-center justify-between gap-4">
                         <div className="flex items-center gap-3">
                             <InputCheckbox
                                 value={task?.concluded?.toString()}
@@ -47,15 +60,21 @@ export default function TaskItem({task}: TaskItemProps) {
                             <ButtonIcon icon={TrashIcon} variant="tertiary"/>
                             <ButtonIcon icon={PencilIcon} variant="tertiary" onClick={handleEditTask}/>
                         </div>
-                    </>
+                    </div>
                     : (
-                        <>
-                            <InputText className="flex-1"/>
+                        <form onSubmit={handleSaveTask} className="flex items-center justify-between gap-4">
+                            <InputText
+                                className="flex-1"
+                                onChange={handleChangeTaskTitle}
+                                value={taskTitle}
+                                required
+                                autoFocus
+                            />
                             <div className="flex gap-1">
                                 <ButtonIcon icon={XIcon} variant="secondary" onClick={handleExitTask}/>
-                                <ButtonIcon icon={CheckIcon} variant="primary"/>
+                                <ButtonIcon type="submit" icon={CheckIcon} variant="primary"/>
                             </div>
-                        </>
+                        </form>
                     )
                 }
             </Card>
