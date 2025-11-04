@@ -12,58 +12,60 @@ import ButtonIcon from "./component/button-icon.tsx";
 import InputText from "./component/input-text.tsx";
 import InputCheckbox from "./component/input-checkbox.tsx";
 import Card from "./component/card.tsx";
+import Container from "./component/container.tsx";
 
 function App() {
 
     return (
-        <div className="grid gap-3">
-            <Text className="text-green-dark">
-                Olá Mundo!
-            </Text>
+        <Container>
+            <div className="grid gap-10">
+                <Text className="text-green-dark">
+                    Olá Mundo!
+                </Text>
 
-            <div className="flex gap-1">
-                <Icon svg={TrashIcon} className="fill-pink-base"/>
-                <Icon svg={CheckIcon} className="fill-pink-base"/>
-                <Icon svg={PlusIcon} className="fill-pink-base"/>
-                <Icon svg={SpinnerIcon} animate className="fill-pink-base"/>
-                <Icon svg={PencilIcon} className="fill-pink-base"/>
-                <Icon svg={XIcon} className="fill-pink-base"/>
+                <div className="flex flex-col gap-2">
+                    <Icon svg={TrashIcon} className="fill-pink-base"/>
+                    <Icon svg={CheckIcon} className="fill-pink-base"/>
+                    <Icon svg={PlusIcon} className="fill-pink-base"/>
+                    <Icon svg={SpinnerIcon} animate className="fill-pink-base"/>
+                    <Icon svg={PencilIcon} className="fill-pink-base"/>
+                    <Icon svg={XIcon} className="fill-pink-base"/>
 
-                <div>
-                    <Badge variant="primary">
-                                2 de 5
-                    </Badge>
-                    <Badge variant="secondary">
-                        5
-                    </Badge>
-                </div>
+                    <div>
+                        <Badge variant="primary">
+                            2 de 5
+                        </Badge>
+                        <Badge variant="secondary">
+                            5
+                        </Badge>
+                    </div>
 
-                <div>
-                    <Button icon={PlusIcon}> Nova Tarefa </Button>
-                </div>
+                    <div>
+                        <Button icon={PlusIcon}> Nova Tarefa </Button>
+                    </div>
 
-                <div className="flex gap-1">
-                    <ButtonIcon icon={TrashIcon} variant="secondary"/>
-                    <ButtonIcon icon={TrashIcon} variant="secondary"/>
-                    <ButtonIcon icon={TrashIcon} variant="tertiary"/>
-                </div>
+                    <div className="flex gap-1">
+                        <ButtonIcon icon={TrashIcon} variant="secondary"/>
+                        <ButtonIcon icon={TrashIcon} variant="secondary"/>
+                        <ButtonIcon icon={TrashIcon} variant="tertiary"/>
+                    </div>
 
-                <div>
-                    <InputText />
-                </div>
+                    <div>
+                        <InputText/>
+                    </div>
 
-                <div>
-                    <InputCheckbox />
-                </div>
+                    <div>
+                        <InputCheckbox/>
+                    </div>
 
-                <div>
-                    <Card size="md">
-                        Olá Mundo!
-                    </Card>
+                    <div>
+                        <Card size="md">
+                            Olá Mundo!
+                        </Card>
+                    </div>
                 </div>
             </div>
-        </div>
-
+        </Container>
     )
 }
 
