@@ -7,7 +7,6 @@ function App() {
             <BrowserRouter> {/*onde a rota vai*/}
                 <Routes> {/*componente de rotas*/}
                     <Route element={<LayoutMain />}>
-                        {/* rota índice vazia: habilita o layout na home */}
                         <Route index element={<></>} />
                         <Route path={"/componentes"} element={<PageComponents />} /> {/*a rota em si*/}
                     </Route>

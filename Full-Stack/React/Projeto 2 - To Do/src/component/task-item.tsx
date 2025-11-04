@@ -9,9 +9,15 @@ import InputText from "./ui/input-text.tsx";
 import XIcon from "../assets/icons/X-Regular.svg?react";
 import CheckIcon from "../assets/icons/Check-Regular.svg?react";
 import Container from "./ui/container.tsx";
+import {cx} from "class-variance-authority";
+import {type Task, TASK_STATE} from "../models/task.tsx";
 
-export default function TaskItem() {
-    const [isEditing, setEditing] = React.useState();
+interface TaskItemProps {
+    task: Task;
+}
+
+export default function TaskItem({task}: TaskItemProps) {
+    const [isEditing, setEditing] = React.useState(task?.state === TASK_STATE.Creating);
 
     function handleEditTask() {
         // @ts-ignore
@@ -29,9 +35,12 @@ export default function TaskItem() {
                 {!isEditing ? /*"não está a editar então mostra o padrão*/
                     <>
                         <div className="flex items-center gap-3">
-                            <InputCheckbox />
-                            <Text variant="flex-1">
-                                🛒 Fazer compras da semana
+                            <InputCheckbox
+                                value={task?.concluded?.toString()}
+                                checked={task?.concluded}
+                            />
+                            <Text className={cx("flex-1", { "line-through": task?.concluded})}>
+                                {task?.title}
                             </Text>
                         </div>
                         <div className="flex gap-1">

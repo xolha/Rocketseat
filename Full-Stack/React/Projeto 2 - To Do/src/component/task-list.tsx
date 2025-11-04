@@ -1,10 +1,10 @@
 import Button from "./ui/button.tsx";
 import PlusIcon from "../assets/icons/Plus-Regular.svg?react";
 import TaskItem from "./task-item.tsx";
+import useTasks from "../hooks/use-tasks.ts";
 
 export default function TaskList() {
-    const {tasks} = useTasks();
-    const {prepareTask}  = useTasks();
+    const {tasks, prepareTask} = useTasks();
 
     function handleNewTask() {
         prepareTask()
@@ -13,14 +13,14 @@ export default function TaskList() {
     return (
         <>
             <section>
-                <Button className="w-full" icon={PlusIcon}>
+                <Button className="w-full" icon={PlusIcon} onClick={handleNewTask}>
                     Nova tarefa
                 </Button>
             </section>
             <section className="space-y-2">
-                <TaskItem />
-                <TaskItem />
-                <TaskItem />
+                {tasks.map(task => (
+                    <TaskItem key={task.id} task={task} />
+                ))}
             </section>
         </>
     )
