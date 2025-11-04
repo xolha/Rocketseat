@@ -1,6 +1,6 @@
 export const TASKS_KEY = 'tasks'
 
-export const TASK_STATE = {
+export const TaskState = {
     Creating: 'creating',
     Created: 'created',
 } as const;

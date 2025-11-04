@@ -1,5 +1,5 @@
 import useLocalStorage from "use-local-storage";
-import {TASKS_KEY, TASK_STATE, type Task} from "../models/task.tsx";
+import {type Task, TASKS_KEY, TaskState} from "../models/task.tsx";
 
 
 export default function useTasks() {
@@ -11,14 +11,18 @@ export default function useTasks() {
             {
                 id: Math.random().toString(36).substring(2, 9),
                 title: "",
-                state: TASK_STATE.Creating,
+                state: TaskState,
                 concluded: false,
             },
         ])
     }
 
+    function updateTask(id: string, payload: {title: Task['title']}) {
+        setTasks(task.map(task => task.id === id ? {...task, state: TaskState.Created} : task))
+    }
+
     return {
-        tasks,
         prepareTask,
+        updateTask,
     }
 }

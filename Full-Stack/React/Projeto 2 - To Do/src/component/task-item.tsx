@@ -10,16 +10,18 @@ import XIcon from "../assets/icons/X-Regular.svg?react";
 import CheckIcon from "../assets/icons/Check-Regular.svg?react";
 import Container from "./ui/container.tsx";
 import {cx} from "class-variance-authority";
-import {type Task, TASK_STATE} from "../models/task.tsx";
+import {type Task, TaskState} from "../models/task.tsx";
+import useTask from "../hooks/use-task.ts";
 
 interface TaskItemProps {
     task: Task;
 }
 
 export default function TaskItem({task}: TaskItemProps) {
-    const [isEditing, setEditing] = React.useState(task?.state === TASK_STATE.Creating);
+    const [isEditing, setEditing] = React.useState(task?.state === TaskState.Creating);
 
-    const [taskTitle, setTaskTitle] = React.useState(task?.title ?? "")
+    const [taskTitle, setTaskTitle] = React.useState(task.title || "")
+    const {updateTask} = useTask()
 
     function handleEditTask() {
         // @ts-ignore
@@ -37,14 +39,13 @@ export default function TaskItem({task}: TaskItemProps) {
 
     function handleSaveTask(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-         console.log({id: task.id, title: taskTitle});
-
-         setEditing(false);
+        updateTask(task.id, {title: taskTitle})
+        setEditing(false);
     }
 
     return (
         <Container>
-            <Card size="md" >
+            <Card size="md">
                 {!isEditing ? /*"não está a editar então mostra o padrão*/
                     <div className="flex items-center justify-between gap-4">
                         <div className="flex items-center gap-3">
@@ -52,7 +53,7 @@ export default function TaskItem({task}: TaskItemProps) {
                                 value={task?.concluded?.toString()}
                                 checked={task?.concluded}
                             />
-                            <Text className={cx("flex-1", { "line-through": task?.concluded})}>
+                            <Text className={cx("flex-1", {"line-through": task?.concluded})}>
                                 {task?.title}
                             </Text>
                         </div>
@@ -64,9 +65,9 @@ export default function TaskItem({task}: TaskItemProps) {
                     : (
                         <form onSubmit={handleSaveTask} className="flex items-center justify-between gap-4">
                             <InputText
+                                value={taskTitle}
                                 className="flex-1"
                                 onChange={handleChangeTaskTitle}
-                                value={taskTitle}
                                 required
                                 autoFocus
                             />
