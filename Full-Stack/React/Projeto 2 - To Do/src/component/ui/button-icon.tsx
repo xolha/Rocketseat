@@ -1,12 +1,13 @@
-import {cva, type VariantProps} from "class-variance-authority";
-import Icon from "./icon.tsx";
+import { cva, VariantProps } from "class-variance-authority";
+import Icon from "./icon";
+import Skeleton from "./skeleton";
 
-import SpinnerIcon from "../../assets/icons/spinner.svg?react";
-import React from "react";
-import Skeleton from "./skeleton.tsx";
+import SpinnerIcon from "../assets/icons/spinner.svg?react";
 
 export const buttonIconVariants = cva(
-    `inline-flex items-center justify-center cursor-pointer transition group`,
+    `
+  inline-flex items-center justify-center cursor-pointer transition group
+`,
     {
         variants: {
             variant: {
@@ -71,13 +72,12 @@ export default function ButtonIcon({
                                        ...props
                                    }: ButtonIconProps) {
     if (loading) {
-        return <Skeleton
-            rounded="sm"
-            className={buttonIconVariants({
-                variant: "none",
-                size,
-                className,
-            })}/>;
+        return (
+            <Skeleton
+                rounded="sm"
+                className={buttonIconVariants({ variant: "none", size, className })}
+            />
+        );
     }
 
     return (
@@ -92,7 +92,7 @@ export default function ButtonIcon({
             {...props}
         >
             <Icon
-                className={buttonIconIconVariants({size, variant})}
+                className={buttonIconIconVariants({ size, variant })}
                 animate={handling}
                 svg={handling ? SpinnerIcon : icon}
             />

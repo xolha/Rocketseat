@@ -1,12 +1,14 @@
 import { cva, type VariantProps } from "class-variance-authority";
-import Icon from "./icon.tsx";
-import Text from "./text.tsx";
+import Icon from "./icon";
+import Text from "./text";
 
-import SpinnerIcon from "../../assets/icons/spinner.svg?react";
-import React from "react";
+import SpinnerIcon from "../assets/icons/spinner.svg?react";
 
 export const buttonVariants = cva(
-    `flex items-center justify-center cursor-pointer transition rounded-lg group gap-2`,
+    `
+    flex items-center justify-center cursor-pointer
+    transition rounded-lg group gap-2
+  `,
     {
         variants: {
             variant: {

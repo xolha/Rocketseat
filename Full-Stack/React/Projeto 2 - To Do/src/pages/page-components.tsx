@@ -15,60 +15,68 @@ import Card from "../component/ui/card.tsx";
 import Container from "../component/ui/container.tsx";
 
 
-export default function PageComponents () {
+export default function PageComponents() {
     return (
         <Container>
             <div className="grid gap-10">
-                <Text className="text-green-dark">
-                    Olá Mundo!
-                </Text>
-
                 <div className="flex flex-col gap-2">
-                    <Icon svg={TrashIcon} className="fill-pink-base"/>
-                    <Icon svg={CheckIcon} className="fill-pink-base"/>
-                    <Icon svg={PlusIcon} className="fill-pink-base"/>
-                    <Icon svg={SpinnerIcon} animate className="fill-pink-base"/>
-                    <Icon svg={PencilIcon} className="fill-pink-base"/>
-                    <Icon svg={XIcon} className="fill-pink-base"/>
+                    <Text variant="body-sm-bold" className="text-pink-base">
+                        Olá mundo!
+                    </Text>
+                    <Text className="text-green-base">Olá mundo!</Text>
+                    <Text variant="body-md-bold">Olá mundo!</Text>
+                    <Text>Levar o dog pra passear</Text>
+                </div>
 
-                    <div className="flex gap-1">
-                        <Badge variant="primary">
-                            2 de 5
-                        </Badge>
-                        <Badge variant="secondary">
-                            5
-                        </Badge>
-                        <Badge loading>
-                            5
-                        </Badge>
-                    </div>
+                <div className="flex gap-1">
+                    <Icon svg={TrashIcon} className="fill-green-base" />
+                    <Icon svg={CheckIcon} />
+                    <Icon svg={PlusIcon} />
+                    <Icon svg={SpinnerIcon} animate />
+                    <Icon svg={PencilIcon} />
+                    <Icon svg={XIcon} />
+                </div>
 
-                    <div>
-                        <Button icon={PlusIcon}> Nova Tarefa </Button>
-                    </div>
+                <div className="flex gap-1">
+                    <Badge variant="secondary">5</Badge>
+                    <Badge variant="primary">2 de 5</Badge>
+                    <Badge loading></Badge>
+                </div>
 
-                    <div className="flex gap-1">
-                        <ButtonIcon icon={TrashIcon} variant="secondary"/>
-                        <ButtonIcon icon={TrashIcon} variant="secondary"/>
-                        <ButtonIcon icon={TrashIcon} variant="tertiary"/>
-                    </div>
+                <div>
+                    <Button icon={PlusIcon}>Nova tarefa</Button>
+                    <Button icon={PlusIcon} handling>
+                        Criando...
+                    </Button>
+                </div>
 
-                    <div>
-                        <InputText/>
-                    </div>
+                <div className="flex gap-1">
+                    <ButtonIcon icon={TrashIcon} disabled />
+                    <ButtonIcon icon={TrashIcon} variant="secondary" />
+                    <ButtonIcon icon={TrashIcon} variant="tertiary" />
+                    <ButtonIcon icon={TrashIcon} loading />
+                    <ButtonIcon icon={TrashIcon} handling />
+                </div>
 
-                    <div>
-                        <InputCheckbox/>
-                        <InputCheckbox loading/>
-                    </div>
+                <div>
+                    <InputText />
+                </div>
 
-                    <div>
-                        <Card size="md">
-                            Olá Mundo!
-                        </Card>
-                    </div>
+                <div>
+                    <InputCheckbox />
+                    <InputCheckbox loading />
+                </div>
+
+                <div>
+                    <Card size="md">Olá mundo</Card>
+                </div>
+
+                <div className="space-y-2">
+                    <Skeleton className="h-6" />
+                    <Skeleton className="h-6" />
+                    <Skeleton className="w-96 h-6" />
                 </div>
             </div>
         </Container>
-    )
-}
+    );
+}}

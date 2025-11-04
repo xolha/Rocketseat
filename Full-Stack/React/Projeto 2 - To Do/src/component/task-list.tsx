@@ -1,33 +1,46 @@
-import Button from "./ui/button.tsx";
-import PlusIcon from "../assets/icons/Plus-Regular.svg?react";
-import TaskItem from "./task-item.tsx";
-import useTasks from "../hooks/use-tasks.ts";
-import { TASK_STATE } from "../models/task.tsx";
+import Button from "../component/ui/button";
 
-export default function TaskList() {
-    const {tasks, prepareTask} = useTasks();
+import PlusIcon from "../assets/icons/Plus-Regular.svg?react";
+import TaskItem from "./task-item";
+import useTasks from "../hooks/use-tasks";
+import useTask from "../hooks/use-task";
+import { Task, TaskState } from "../models/task";
+
+export default function TasksList() {
+    const { tasks, isLoadingTasks } = useTasks();
+    const { prepareTask } = useTask();
 
     function handleNewTask() {
-        prepareTask()
+        prepareTask();
     }
 
     return (
         <>
             <section>
                 <Button
-                    className="w-full"
                     icon={PlusIcon}
+                    className="w-full"
                     onClick={handleNewTask}
-                    disabled={tasks.some((task) => task.state === TASK_STATE.Creating)}
+                    disabled={
+                        tasks.some((task) => task.state === TaskState.Creating) ||
+                        isLoadingTasks
+                    }
                 >
                     Nova tarefa
                 </Button>
             </section>
+
             <section className="space-y-2">
-                {tasks.map(task => (
-                    <TaskItem key={task.id} task={task} />
-                ))}
+                {!isLoadingTasks &&
+                    tasks.map((task) => <TaskItem key={task.id} task={task} />)}
+                {isLoadingTasks && (
+                    <>
+                        <TaskItem task={{} as Task} loading />
+                        <TaskItem task={{} as Task} loading />
+                        <TaskItem task={{} as Task} loading />
+                    </>
+                )}
             </section>
         </>
-    )
+    );
 }
