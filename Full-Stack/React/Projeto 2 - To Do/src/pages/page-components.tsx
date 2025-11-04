@@ -1,18 +1,18 @@
-import Text from "../component/text.tsx"
+import Text from "../component/ui/text.tsx"
 import TrashIcon from "../assets/icons/Trash-Regular.svg?react"
-import Icon from "../component/icon.tsx";
+import Icon from "../component/ui/icon.tsx";
 import CheckIcon from "../assets/icons/Check-Regular.svg?react"
 import PlusIcon from "../assets/icons/Plus-Regular.svg?react"
 import SpinnerIcon from "../assets/icons/spinner.svg?react"
 import PencilIcon from "../assets/icons/PencilSimple-Regular.svg?react"
 import XIcon from "../assets/icons/X-Regular.svg?react"
-import Badge from "../component/badge.tsx";
-import Button from "../component/button.tsx";
-import ButtonIcon from "../component/button-icon.tsx";
-import InputText from "../component/input-text.tsx";
-import InputCheckbox from "../component/input-checkbox.tsx";
-import Card from "../component/card.tsx";
-import Container from "../component/container.tsx";
+import Badge from "../component/ui/badge.tsx";
+import Button from "../component/ui/button.tsx";
+import ButtonIcon from "../component/ui/button-icon.tsx";
+import InputText from "../component/ui/input-text.tsx";
+import InputCheckbox from "../component/ui/input-checkbox.tsx";
+import Card from "../component/ui/card.tsx";
+import Container from "../component/ui/container.tsx";
 
 
 export default function PageComponents () {

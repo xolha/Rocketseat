@@ -1,8 +1,8 @@
 import { cva, type VariantProps } from "class-variance-authority";
-import Icon from "./icon";
-import Text from "./text";
+import Icon from "./icon.tsx";
+import Text from "./text.tsx";
 
-import SpinnerIcon from "../assets/icons/spinner.svg?react";
+import SpinnerIcon from "../../assets/icons/spinner.svg?react";
 import React from "react";
 
 export const buttonVariants = cva(

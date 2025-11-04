@@ -1,6 +1,6 @@
 import { cva, type VariantProps } from "class-variance-authority";
-import CheckIcon from "../assets/icons/Check-Regular.svg?react";
-import Icon from "./icon";
+import CheckIcon from "../../assets/icons/Check-Regular.svg?react";
+import Icon from "./icon.tsx";
 import React from "react";
 import Skeleton from "./skeleton.tsx";
 

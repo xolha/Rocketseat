@@ -1,4 +1,4 @@
-import Container from "../component/container.tsx";
+import Container from "../component/ui/container.tsx";
 
 export default function PageHome() {
     return <>

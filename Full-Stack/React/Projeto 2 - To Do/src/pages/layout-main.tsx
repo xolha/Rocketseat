@@ -1,6 +1,6 @@
-import Container from "../component/container.tsx";
+import Container from "../component/ui/container.tsx";
 import {NavLink, Outlet} from "react-router";
-import Text from "../component/text.tsx";
+import Text from "../component/ui/text.tsx";
 
 export default function LayoutMain() {
     return <>

@@ -1,7 +1,7 @@
 import {cva, type VariantProps} from "class-variance-authority";
-import Icon from "./icon";
+import Icon from "./icon.tsx";
 
-import SpinnerIcon from "../assets/icons/spinner.svg?react";
+import SpinnerIcon from "../../assets/icons/spinner.svg?react";
 import React from "react";
 import Skeleton from "./skeleton.tsx";
 
