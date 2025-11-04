@@ -11,6 +11,7 @@ import Button from "./component/button.tsx";
 import ButtonIcon from "./component/button-icon.tsx";
 import InputText from "./component/input-text.tsx";
 import InputCheckbox from "./component/input-checkbox.tsx";
+import Card from "./component/card.tsx";
 
 function App() {
 
@@ -53,6 +54,12 @@ function App() {
 
                 <div>
                     <InputCheckbox />
+                </div>
+
+                <div>
+                    <Card size="md">
+                        Olá Mundo!
+                    </Card>
                 </div>
             </div>
         </div>
