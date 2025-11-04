@@ -31,11 +31,14 @@ function App() {
                     <Icon svg={PencilIcon} className="fill-pink-base"/>
                     <Icon svg={XIcon} className="fill-pink-base"/>
 
-                    <div>
+                    <div className="flex gap-1">
                         <Badge variant="primary">
                             2 de 5
                         </Badge>
                         <Badge variant="secondary">
+                            5
+                        </Badge>
+                        <Badge loading>
                             5
                         </Badge>
                     </div>
@@ -56,6 +59,7 @@ function App() {
 
                     <div>
                         <InputCheckbox/>
+                        <InputCheckbox loading/>
                     </div>
 
                     <div>

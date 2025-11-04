@@ -3,6 +3,7 @@ import Icon from "./icon";
 
 import SpinnerIcon from "../assets/icons/spinner.svg?react";
 import React from "react";
+import Skeleton from "./skeleton.tsx";
 
 export const buttonIconVariants = cva(
     `inline-flex items-center justify-center cursor-pointer transition group`,
@@ -69,6 +70,15 @@ export default function ButtonIcon({
                                        icon,
                                        ...props
                                    }: ButtonIconProps) {
+    if (loading) {
+        return <Skeleton
+            rounded="sm"
+            className={buttonIconVariants({
+                variant: "none",
+                size,
+                className,
+            })}/>;
+    }
 
     return (
         <button
